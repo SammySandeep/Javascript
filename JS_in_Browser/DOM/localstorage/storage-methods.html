@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LocalStorage</title>
+    </head>
+
+    <body>
+        <h1>Working with Local Storage</h1>
+
+        <script>
+            console.log(localStorage)  // Storage {length: 0}
+
+            // add a new key value pair
+            localStorage.setItem('name','dct academy')
+            localStorage.setItem('city','bangalore')
+            console.log(localStorage) // Storage {name: 'dct academy', city: 'bangalore', length: 2}
+            console.log(localStorage.length)  // 2
+
+            // get a value
+            console.log(localStorage.getItem('name'))  // 'dct academy'
+            console.log(localStorage.getItem('address'))  // 2
+
+            // remove item
+            localStorage.removeItem('city')
+            console.log(localStorage)  //  Storage {name: 'dct academy', length: 1}s
+
+            // clear()
+            localStorage.clear()
+            console.log(localStorage)  // Storage {length: 0}
+        </script>
+    </body>
+</html>

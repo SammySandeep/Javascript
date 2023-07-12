@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LocalStorage</title>
+    </head>
+
+    <body>
+        <h1>Working with Local Storage</h1>
+
+        <script>
+            localStorage.setItem('name','jack')
+            localStorage.setItem('age', 22)
+            console.log(localStorage)  //  Storage {age: '22', name: 'jack', length: 2}
+
+            localStorage.setItem('contact',JSON.stringify({mobile: '12345678', email:'abc@gmail.com'}))
+            localStorage.setItem('skills', JSON.stringify(['js','react','angular','node']))
+            console.log(localStorage) // Storage {contact: '{"mobile":"12345678","email":"abc@gmail.com"}', skills: '["js","react","angular","node"]', age: '22', name: 'jack', length: 4}
+ 
+            console.log(localStorage.getItem('contact'))  // "{"mobile":"12345678","email":"abc@gmail.com"}"
+            const parsedContact = JSON.parse(localStorage.getItem('contact'))
+            console.log(parsedContact) // {mobile: '12345678', email: 'abc@gmail.com'}
+
+            const parsedSkills = JSON.parse(localStorage.getItem('skills'))
+            console.log(parsedSkills)  // ['js', 'react', 'angular', 'node']
+        </script>
+    </body>
+</html>

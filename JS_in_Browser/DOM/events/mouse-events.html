@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Mouse Events</title>
+    </head>
+    <body>
+        <button onclick="func1()">click event</button>
+        <button ondblclick="func2()">dblclick event</button>
+        <button onmouseenter="func3()">mouseenter event</button>
+        <button onmouseleave="func4()">mouseleave event</button>
+        <button onmousedown="func5()">mousedown event</button>
+        <button onmouseup="func6()">mouseup event</button>
+        
+        <script>
+            function func1(){
+                console.log('Fires when the mouse is pressed and released on an element')
+            }
+
+            function func2(){
+                console.log('Fires when an element is clicked is twice')
+            }
+
+            function func3(){
+                console.log('Fires when a pointer enters an element')
+            }
+
+            function func4(){
+                console.log('Fires when a pointer leaves an element')
+            }
+
+            function func5(){
+                console.log('Fires when the mouse button was pressed')
+            }
+
+            function func6(){
+                console.log('Fires when the mouse button was released')
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+       <title>Select Single</title>
+    </head>
+    <body>
+        <h1>Client - DCT Inc</h1>
+        <p>Build an Email System</p>
+        <h1>Completed Tasks</h1>
+        <ul>
+            <li>understand requirement</li>
+            <li>developmnt application</li>
+            <li>deploy application</li>
+        </ul>
+
+        <script>
+           const h1Elements = document.querySelectorAll('h1')
+           const pHandle = document.querySelector('p')
+           const liTags = document.querySelectorAll('li')
+
+           for(let ele of h1Elements){
+               ele.style.fontSize = '40px'
+           }
+
+           pHandle.style.fontSize = '20px'
+
+           for(let i = 0; i < liTags.length; i++){
+               liTags[i].style.textDecoration = 'line-through'
+           }
+        </script>
+    </body>
+</html>

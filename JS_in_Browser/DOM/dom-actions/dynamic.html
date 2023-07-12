@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Dynamic Web Page</title>
+    </head>
+    <body>
+        <div id="app">
+
+        </div>
+        <script>
+            const teams = [
+            'Delhi Capitals',
+            'Kings XI Punjab',
+            'Chennai Super Kings',
+            'Kolkata Night Riders',
+            'Mumbai Indians',
+            'Rajasthan Royals',
+            'Royal Challengers Bangalore',
+            'Sunrisers Hyderabad'
+            ]
+
+            const appHandle = document.getElementById('app')
+            const h1Tag = document.createElement('h1')
+            const ulTag = document.createElement('ul')
+            h1Tag.textContent = `List IPL Teams - ${teams.length}`
+            appHandle.appendChild(h1Tag)
+
+            teams.sort().reverse().forEach(function(ele){
+                const liTag = document.createElement('li')
+                liTag.textContent = ele
+                ulTag.appendChild(liTag)
+            })
+
+            appHandle.appendChild(ulTag)
+
+
+        </script>
+    </body>
+</html>

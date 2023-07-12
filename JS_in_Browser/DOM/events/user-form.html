@@ -1,0 +1,26 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>User form</title>
+    </head>
+    <body>
+        <h2>User Form</h2>
+        <form onsubmit="submitForm(event)">
+            <label for="username">name</label>
+            <input type="text" name="username" id="username" /><br/>
+
+            <label for="email">email</label>
+            <input type="text" name="email" id="email" /><br/>
+            <input type="submit" />
+        </form>
+
+        <script>
+            function submitForm(e){
+                e.preventDefault()
+                console.log('submit event fired',e)  // SubmitEvent {isTrusted: true, submitter: input ...}
+                console.log('username input', e.target.username.value)  // username input sandeep
+                console.log('email input', e.target.email.value)  // email input abc@gmail.com
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Words and Characters counter</title>
+    </head>
+    <body>
+        <form onsubmit="submitForm(event)">
+            <label for="str">Enter a string</label>
+            <input type="text" name="str" id="str" /><br/>
+
+            <input type="submit" />
+        </form>
+        <h2>
+
+        </h2>
+        <script>
+            function submitForm(e){
+                e.preventDefault()
+                const value = e.target.str.value
+                const characters = value.length
+                const countWords = value.split(' ').length
+
+                const h2andle = document.querySelector('h2')
+                h2andle.textContent = `Total characters - ${characters} || Total words - ${countWords}`                
+            }
+        </script>
+    </body>
+</html>

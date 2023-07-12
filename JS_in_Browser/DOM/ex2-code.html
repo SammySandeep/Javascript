@@ -1,0 +1,16 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Exercise 2 - Display Name Length</title>
+    </head>
+    <body>
+        <h1></h1>
+        <script>
+           const h1Handle = document.querySelector('h1')
+           const name = prompt('Enter your Name').trim()
+           const strLength = name.length
+
+           h1Handle.textContent = `${name} has ${strLength} characters`
+        </script>
+    </body>
+</html>

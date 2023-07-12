@@ -1,0 +1,20 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+       <title>Intro to DOM</title>
+    </head>
+    <body>
+        <h1 class="main">Introduction to DOM</h1>
+        <p class="main">The Document Object model, usually referred to as the DOM, is an essential part of making websites interactive. It is an
+            interface that allows a programming language to manipulate the content, structure and style of a website. Javascript is
+            client-side scripting language that connects to the DOM in an internet browser. 
+        </p>
+
+        <script>
+            const elements = document.getElementsByClassName('main')
+            for(let i = 0; i < elements.length; i++){
+                elements[i].style.fontFamily = 'Arial'
+            }
+        </script>
+    </body>
+</html>

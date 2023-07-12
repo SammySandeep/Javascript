@@ -1,0 +1,24 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Traversing DOM Nodes</title>
+    </head>
+    <body>
+        <ul id="myTasks">
+            <li>understand requirement</li>
+            <li>development application</li>
+            <li>deploy application</li>
+        </ul>
+
+        <script>
+            // const ulTag = document.getElementById('myTasks')
+            const ulTag = document.querySelector('#myTasks')
+            const firstTask = ulTag.firstElementChild
+            console.log(ulTag.children)  // HTMLCollection(3) [li, li, li]
+            console.log('first element', ulTag.firstElementChild)  // first element <li>​::marker​"understand requirement"</li>​
+            console.log('second element', firstTask.nextElementSibling)  // second element <li>​::marker​"development application"</li>​
+            console.log('last element', ulTag.lastElementChild)  //  last element <li>​::marker​"deploy application"</li>​
+            console.log(firstTask.previousElementSibling)  // null
+        </script>
+    </body>
+</html>

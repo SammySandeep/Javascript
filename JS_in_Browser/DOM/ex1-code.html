@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+       <title>Intro to DOM</title>
+       <style>
+           body {
+               background-color: honeydew;
+           }
+           h1 {
+               text-align: center;
+               text-decoration: underline;
+               color: green
+           }
+       </style>
+    </head>
+    <body>
+        <h1>Introduction to DOM</h1>
+        <p>The Document Object model, usually referred to as the DOM, is an essential part of making websites interactive. It is an
+            interface that allows a programming language to manipulate the content, structure and style of a website. Javascript is
+            client-side scripting language that connects to the DOM in an internet browser. 
+        </p>
+
+        <script>
+            const h1Handle = document.querySelector('h1')
+            const pHandle = document.querySelector('p')
+            
+            // Change the Heading to 'Understanding the DOM' 
+            h1Handle.textContent = "Understanding the DOM"
+
+            // Change the color of the heading to orange
+            h1Handle.style.color = "orange"
+
+            // Increase the font size of the paragraph text to 20
+            pHandle.style.fontSize = "20px"
+
+            // Change the background color of the page to white
+            document.querySelector('body').style.backgroundColor = "white"
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Update Element</title>
+    </head>
+    <body>
+        <h1>Social Media Links</h1>
+        <a href="https://www.facebook.com/">facebook</a>
+        <a href="https://www.instagram.com/">instagram</a>
+        <a href="https://www.linkedin.com/signup">linkedin</a>
+
+        <script>
+            const elements = document.querySelectorAll('a')
+            for(let i = 0; i < elements.length; i++){
+                elements[i].setAttribute('target','_blank')
+            }
+        </script>
+    </body>
+</html>
